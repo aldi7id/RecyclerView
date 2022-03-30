@@ -6,6 +6,9 @@
     android:layout_height="match_parent"
     android:id="@+id/recycle_view"
     tools:listitem="@layout/my_contact_item"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+    android:orientation="vertical"
+    >
 
 </androidx.recyclerview.widget.RecyclerView>

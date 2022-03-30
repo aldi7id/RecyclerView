@@ -29,10 +29,10 @@ class MainActivity : AppCompatActivity() {
         val adapter = ContactAdapter(listContact)
 
         //LayoutManager
-        val layoutManager = LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false)
+        //val layoutManager = LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false)
 
         //Set Layout manager pada RecycleView
-        binding.recycleView.layoutManager = layoutManager
+        //binding.recycleView.layoutManager = layoutManager
 
         //set adapter pada recycleview
         binding.recycleView.adapter = adapter
