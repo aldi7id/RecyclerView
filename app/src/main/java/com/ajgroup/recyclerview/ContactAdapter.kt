@@ -3,11 +3,12 @@ package com.ajgroup.recyclerview
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.ajgroup.recyclerview.databinding.ActivityMainBinding
 import com.ajgroup.recyclerview.databinding.MyContactItemBinding
 
-class ContactAdapter(val listContact: ArrayList<MyContact>) : RecyclerView.Adapter<ContactAdapter.ViewHolder>() {
+class ContactAdapter(var listContact: ArrayList<MyContact>) : RecyclerView.Adapter<ContactAdapter.ViewHolder>() {
 
     class ViewHolder(val binding: MyContactItemBinding) : RecyclerView.ViewHolder(binding.root)
 
@@ -25,5 +26,11 @@ class ContactAdapter(val listContact: ArrayList<MyContact>) : RecyclerView.Adapt
             tvName.text = listContact[position].name
             tvNoHp.text = listContact[position].noHp
         }
+    }
+    fun setData(newContactList: ArrayList<MyContact>){
+        val diffUtil = MyDiffUtil(listContact, newContactList)
+        val diffResults = DiffUtil.calculateDiff(diffUtil)
+        listContact = newContactList
+        diffResults.dispatchUpdatesTo(this)
     }
 }

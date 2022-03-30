@@ -1,3 +1,3 @@
 package com.ajgroup.recyclerview
 
-data class MyContact (val name: String,val noHp: String)
+data class MyContact (val id: Int, val name: String,val noHp: String)

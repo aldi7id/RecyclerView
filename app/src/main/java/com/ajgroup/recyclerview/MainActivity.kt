@@ -13,16 +13,16 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val listContact = arrayListOf(
-            MyContact("Sabrina","083875882441"),
-            MyContact("Aldi","083875323424"),
-            MyContact("Sayang","0843432441"),
-            MyContact("Kamu","08382342423"),
-            MyContact("Tapi","0821241221"),
-            MyContact("Malah","084215122341"),
-            MyContact("Mantanku","083875882441"),
-            MyContact("Yang","0838754242"),
-            MyContact("Suka","086123422441"),
-            MyContact("Aku","083521322441")
+            MyContact(1,"Sabrina","083875882441"),
+            MyContact(2,"Aldi","083875323424"),
+            MyContact(3,"Sayang","0843432441"),
+            MyContact(4,"Kamu","08382342423"),
+            MyContact(5,"Tapi","0821241221"),
+            MyContact(6,"Malah","084215122341"),
+            MyContact(7,"Mantanku","083875882441"),
+            MyContact(8,"Yang","0838754242"),
+            MyContact(9,"Suka","086123422441"),
+            MyContact(10,"Aku","083521322441")
         )
 
         //Membuat Adapter
