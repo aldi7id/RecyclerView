@@ -21,7 +21,9 @@ class ContactAdapter(val listContact: ArrayList<MyContact>) : RecyclerView.Adapt
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.binding.tvName.text = listContact[position].name
-        holder.binding.tvNoHp.text = listContact[position].noHp
+        holder.binding.apply {
+            tvName.text = listContact[position].name
+            tvNoHp.text = listContact[position].noHp
+        }
     }
 }
